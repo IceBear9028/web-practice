@@ -26,3 +26,14 @@ def threshold_1(x,y):
         return (x-1)*(y-1)
 
 print(threshold(w,h), threshold_1(w,h))
+
+#소수 구하는 코드//심심해서 만들어봄.
+prime_number = []
+
+for i in range(30000,30100):
+    for j in range(2,i+1):
+        if i%j == 0:
+            break
+        elif i-1 == j: prime_number.append(i)
+
+print(prime_number)

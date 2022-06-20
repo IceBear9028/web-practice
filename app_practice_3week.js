@@ -28,9 +28,46 @@ console.log(title.className);
 //className은 비어있어서 아무것도 안나옴.
 
 //2. className 활용
-const hello = document.getElementsByClassName("hello") 
+const hello = document.getElementsByClassName("hello");
 //확인하면 classname해당되는 코드들이 어레이 형태로 출력
-console.log(hello)
+console.log(hello);
+
+const hello_ = document.querySelector(".hello h1");
+//css형태로 사용된다.
+//class 이름 내의 작은 element를 찾아준다.
+//--> 단,같은 element들이 여러개인 경우, 첫번째 하나의 elemrnt 만 찾는다.
+//앞으로도 자주 사용할 함수
+const hello_1 = document.querySelectorAll(".hello h1");
+const hello_2 = document.querySelectorAll(".hello");
+//hello 라는 이름의 클래스는 모두 갖고 온다.
+// 두 코드가 하는 일은 같다.
+// getElementsByid, querySelector 모두 같은 기능으로도 사용가능.
+console.log(hello_);
+console.log(hello_1);
+console.dir(hello_2);
+
+//3 + 4. Events
+const hello_3 = document.querySelector(".hello:first-child h1");
+//class 이름이 hello를 가진 div에서 첫번째 h1을 찾아 오는 기능
+//시바로미 왜 안되는건데?
+console.log(hello_3);
+
+hello_.style.color = "blue";
+
+//js는 이벤트를 listening을 하는것이 주 목적
+
+function handleTitleClick(){
+    console.log("버튼 눌렀니?");
+    hello_.style.color = "red"
+}
+
+hello_.addEventListener("click",handleTitleClick);
+//addEventLustener("여러 input타입", function) <-function에 ()넣지 않는것 주의
+//input되었을 때, 함수가 작동된다.
+
+//정리 --> html에서 필요한 element를 js로 들고와서, 함수를 실행시킴.
+
+
 
 
 
