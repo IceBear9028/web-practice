@@ -47,7 +47,7 @@ console.log(hello_1);
 console.dir(hello_2);
 
 //3 + 4. Events
-const hello_3 = document.querySelector(".hello:first-child h1");
+const hello_3 = document.querySelector("div.hello_:first-child h1");
 //class 이름이 hello를 가진 div에서 첫번째 h1을 찾아 오는 기능
 //시바로미 왜 안되는건데?
 console.log(hello_3);
@@ -55,19 +55,49 @@ console.log(hello_3);
 hello_.style.color = "blue";
 
 //js는 이벤트를 listening을 하는것이 주 목적
+let i = 0;
 
 function handleTitleClick(){
     console.log("버튼 눌렀니?");
-    hello_.style.color = "red"
-}
+    hello_.style.color = "red";
+    i = i+1;
+    if(i > 10){
+        console.log("그만해 새끼야");
+    };
+};
+function handleMouseEnter(){
+    hello_.innerText = "마우스 여깄다!";
+};
+function handleMouseLeave(){
+    hello_.innerText = "마우스 없어졌어!";
+};
 
-hello_.addEventListener("click",handleTitleClick);
+//hello_.addEventListener("click",handleTitleClick);
+hello_.addEventListener("mouseenter",handleMouseEnter);
+hello_.addEventListener("mouseleave",handleMouseLeave);
+
+
 //addEventLustener("여러 input타입", function) <-function에 ()넣지 않는것 주의
 //input되었을 때, 함수가 작동된다.
 
 //정리 --> html에서 필요한 element를 js로 들고와서, 함수를 실행시킴.
 
+//5. eventlistening
+hello_.onclick = handleTitleClick;
+// == hello_.addEventListener("click",handleTitleClick);
 
+function handleWindowResize(){
+    document.body.style.backgroundColor = "tomato";
+}
+function copyPaste(){
+    alert("복사하지마라 뒤지기 싫으면");
+};
+window.addEventListener("resize",handleWindowResize);
+window.addEventListener("copy",copyPaste);
+//이벤트 리스닝이 생각보다 존나 좋음. 할수 있는게 많음.
 
+//6. 
 
+hello_.addEventListener("click", handleTitleClick);
 
+//7. CSS
