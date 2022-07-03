@@ -18,6 +18,12 @@
 const title = document.getElementById("title");
 // --> getElementById("string") > 괄호 내부의 문자열이 포함된 오브젝트의 원소를 찾아주는 함수.
 console.dir(title);
+
+const helloKorean = document.getElementById("subtitle");
+console.log(helloKorean);
+console.dir(helloKorean);
+
+
 //<script>태그 선언 이후에 h1태그 작성하면 함수가 제대로 작동하지 않음. 왜????
 
 title.innerText = "aaaaa" ;
@@ -101,3 +107,10 @@ window.addEventListener("copy",copyPaste);
 hello_.addEventListener("click", handleTitleClick);
 
 //7. CSS
+const h1 = document.querySelector("span.spanname.span_name");
+console.log(h1)
+
+function handleTitleClick(){
+    h1.className = "active";
+}
+h1.addEventListener("click", handleTitleClick);
