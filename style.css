@@ -6,6 +6,10 @@ body {
     color : cornflowerblue;
 }
 
-.span_name{
+.spanname{
     color :aquamarine;
+}
+
+.clicked{
+    color : black;
 }

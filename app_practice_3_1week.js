@@ -6,12 +6,7 @@ console.log(child1);
 
 
 function handleTitleClick(){
-    const classname = "active"
-    if(child1.className === classname){
-        child1.className = 'span_name';
-    }else{
-        child1.className =  classname;
-    }
+    child1.classList.toggle("clicked");
 }
 //className 을 html에서 변경할 경우, 함수 내부의 이름도 다 바꿔줘야 한다.
 // -> 띠라서, 이름을 변수화 하여 한번만 바꿀수 있게 코딩하자.
