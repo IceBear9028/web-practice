@@ -1,17 +1,17 @@
+const loginForm = document.querySelector(".login-form");
 const loginInput = document.querySelector(".login-form input");
-const loginButton = document.querySelector(".login-form button");
 
-const username = loginInput.value;
-
-
-function btnclick(){
+function onLoginSubmit(element){
     const username = loginInput.value;
-    console.log(username);
+    element.preventDefault();
+    console.log(element);
 }
 
-loginButton.addEventListener("submit",btnclick);
+loginForm.addEventListener("submit",onLoginSubmit);
+//submit은 버튼을 클릭하거나 엔터를 누를때 발생.
+
+onLoginSubmit();
 
 
-console.log(loginInput);
-console.log(loginButton);
-console.log(username);
+//onsole.log(loginInput);
+//console.log(loginButton);
