@@ -100,7 +100,9 @@ function copyPaste(){
 };
 window.addEventListener("resize",handleWindowResize);
 window.addEventListener("copy",copyPaste);
-//이벤트 리스닝이 생각보다 존나 좋음. 할수 있는게 많음.
+//이벤트 리스닝이 생각보다 조옹온나 좋음. 할수 있는게 많음.
+//신주영 왔다 감 ㅋㅋ
+// 아 집가고 싶다!
 
 //6. 
 
